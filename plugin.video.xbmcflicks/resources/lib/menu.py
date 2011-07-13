@@ -265,11 +265,10 @@ def show_root_menu():
    xbmcplugin.endOfDirectory(handle=handle, succeeded=True)   
 
 def show_instant_menu():
-   if(not IN_CANADA):
-      addDirectoryItem(name=SUBMENU1, parameters={ PARAMETER_KEY_MODE:MODE1 }, isFolder=True, thumbnail=os.path.join(resourcePath, 'instant_queue_all.png'))
-      addDirectoryItem(name=SUBMENU1a, parameters={ PARAMETER_KEY_MODE:MODE1a }, isFolder=True, thumbnail=os.path.join(resourcePath, 'instant_queue_movies.png'))
-      addDirectoryItem(name=SUBMENU1b, parameters={ PARAMETER_KEY_MODE:MODE1b }, isFolder=True, thumbnail=os.path.join(resourcePath, 'instant_queue_tv.png'))
-
+   addDirectoryItem(name=SUBMENU1, parameters={ PARAMETER_KEY_MODE:MODE1 }, isFolder=True, thumbnail=os.path.join(resourcePath, 'instant_queue_all.png'))
+   addDirectoryItem(name=SUBMENU1a, parameters={ PARAMETER_KEY_MODE:MODE1a }, isFolder=True, thumbnail=os.path.join(resourcePath, 'instant_queue_movies.png'))
+   addDirectoryItem(name=SUBMENU1b, parameters={ PARAMETER_KEY_MODE:MODE1b }, isFolder=True, thumbnail=os.path.join(resourcePath, 'instant_queue_tv.png'))
+   
    addDirectoryItem(name=SUBMENU2, parameters={ PARAMETER_KEY_MODE:MODE2 }, isFolder=True, thumbnail=os.path.join(resourcePath, 'instant_watch_recommended.png'))
 
    addDirectoryItem(name=SUBMENU5, parameters={ PARAMETER_KEY_MODE:MODE5 }, isFolder=True, thumbnail=os.path.join(resourcePath, 'instant_new_top25.png'))

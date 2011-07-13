@@ -1652,7 +1652,7 @@ def getEpisodeListing(nShowID, nSeasonID, sDiscMode):
     initApp()
     if(not user):
         exit    
-    feeds = netflixClient.user.getSeries(nShowID,nSeasonID,sDiscMode,0,100)
+    feeds = netflixClient.user.getSeries(nShowID,nSeasonID,sDiscMode,0,100,IN_CANADA) #LUDO
     if(DEBUG):
         print simplejson.dumps(feeds,indent=4)
     counter = 0
@@ -1683,7 +1683,7 @@ def doSearch(strArg, strQueue, strInstantOnly=None):
     print "Search String is: " + str(strQueue)
     if(not user):
         exit    
-    feeds = netflixClient.user.searchTitles(strArg,strQueue,0,100)
+    feeds = netflixClient.user.searchTitles(strArg,strQueue,0,100,IN_CANADA) #LUDO
     if(DEBUG):
         print simplejson.dumps(feeds,indent=4)
     counter = 0
